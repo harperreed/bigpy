@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+import logging
 import markdown2
+from optparse import OptionParser
 import re
 import sys
 import urllib2
-from optparse import OptionParser
-import logging
 
 logging.basicConfig(format="%(message)s",level=logging.INFO)
 
