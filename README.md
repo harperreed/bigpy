@@ -1,11 +1,28 @@
 [Big.py](http://harperreed.github.com/bigpy/)
 =====
 
-After [wondering on twitter what the best HTML5 presentation system was](https://twitter.com/harper/status/272538510349717506), I had a [few](https://twitter.com/maxogden/status/272539403287666689) [people](https://twitter.com/mattdennewitz/status/272543105071337473) mention that [big]() was a solid presentation generator. 
+After [wondering on twitter what the best HTML5 presentation system was](https://twitter.com/harper/status/272538510349717506), I had a [few](https://twitter.com/maxogden/status/272539403287666689) [people](https://twitter.com/mattdennewitz/status/272543105071337473) mention that [big]() was a solid presentation generator.
 
-However, I wanted to use markdown to curate and handle my presentations and [big](https://github.com/tmcw/big) didn't handle markdown. There was a [fork](https://github.com/mdznr/big) that use markdown. I wanted to keep my content separate for curation purposes, so it didn't work for me. 
+However, I wanted to use markdown to curate and handle my presentations and [big](https://github.com/tmcw/big) didn't handle markdown. There was a [fork](https://github.com/mdznr/big) that use markdown. I wanted to keep my content separate for curation purposes, so it didn't work for me.
 
-Instead, I wrote a helper: [big.py](https://github.com/harperreed/bigpy). 
+Instead, I wrote a helper: [big.py](https://github.com/harperreed/bigpy).
+
+#Installation
+
+Get the source:
+
+    git clone https://github.com/harperreed/bigpy.git
+    cd bigpy
+
+Using [virtualenv](https://pypi.python.org/pypi/virtualenv)
+and [mkvirtualenv](https://pypi.python.org/pypi/virtualenvwrapper)
+(if you want) set yourself up:
+
+    mkvirtualenv bigpy
+
+Install some dependencies:
+
+    pip install -r requirements.txt
 
 #Usage
 
@@ -38,10 +55,10 @@ Instead, I wrote a helper: [big.py](https://github.com/harperreed/bigpy).
 		Author: Harper Reed
 		Date: November 24, 2012
 		Number of slides: 15
-	Allinone template mode 
+	Allinone template mode
 	Writing HTML: slides.html
 
-This will output a `slides.html` that pulls the latest `big.css` and `big.js` from [tmcw/big]() embedded in it.  
+This will output a `slides.html` that pulls the latest `big.css` and `big.js` from [tmcw/big]() embedded in it.
 
 ###Generate all in one `slides.html` from local js/css
 
@@ -54,10 +71,10 @@ This will output a `slides.html` that pulls the latest `big.css` and `big.js` fr
 		Author: Harper Reed
 		Date: November 24, 2012
 		Number of slides: 15
-	Allinone template mode 
+	Allinone template mode
 	Writing HTML: slides.html
-	
-This will output `slides.html` with a local copy of `big.css` and `big.js` embeded in it. 
+
+This will output `slides.html` with a local copy of `big.css` and `big.js` embeded in it.
 
 ###Generate `slides.html` calling remote js/css
 
@@ -75,7 +92,7 @@ This will output `slides.html` with a local copy of `big.css` and `big.js` embed
 	% Example Slides
 	% Harper Reed
 	% November 24, 2012
-	
+
 	# use &harr; to navigate
 	# Big.py
 	# Big+Python+Markdown
@@ -91,14 +108,14 @@ This will output `slides.html` with a local copy of `big.css` and `big.js` embed
 	# Big.py
 	# Helper script to generate slides from markdown
 	# PY+MD [github.com/ harperreed/ bigpy](https://github.com/harperreed/bigpy)
-	
+
 #Next
 
 No idea. I don't know if i will use this. I just wanted a way to generate big html with a script. It seemed like it should be easy. It was. Only one movie of hacking.
 
-Feel free to fix things as you need them.  
+Feel free to fix things as you need them.
 
 #Thanks
 
 * Obviously thanks goes to [Tom MacWright](https://github.com/tmcw) for [Big](https://github.com/tmcw/big).
-* [@maxogden](https://twitter.com/maxogden) for his insane presentation on [JS for cats](http://t.co/90zq8ux6). It was what convinced me to check out [Big](https://github.com/tmcw/big). 
+* [@maxogden](https://twitter.com/maxogden) for his insane presentation on [JS for cats](http://t.co/90zq8ux6). It was what convinced me to check out [Big](https://github.com/tmcw/big).
