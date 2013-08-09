@@ -38,10 +38,10 @@ Instead, I wrote a helper: [big.py](https://github.com/harperreed/bigpy).
 		Author: Harper Reed
 		Date: November 24, 2012
 		Number of slides: 15
-	Allinone template mode 
+	Allinone template mode
 	Writing HTML: slides.html
 
-This will output a `slides.html` that pulls the latest `big.css` and `big.js` from [tmcw/big]() embedded in it.  
+This will output a `slides.html` that pulls the latest `big.css` and `big.js` from [tmcw/big]() embedded in it.
 
 ###Generate all in one `slides.html` from local js/css
 
@@ -54,10 +54,10 @@ This will output a `slides.html` that pulls the latest `big.css` and `big.js` fr
 		Author: Harper Reed
 		Date: November 24, 2012
 		Number of slides: 15
-	Allinone template mode 
+	Allinone template mode
 	Writing HTML: slides.html
-	
-This will output `slides.html` with a local copy of `big.css` and `big.js` embeded in it. 
+
+This will output `slides.html` with a local copy of `big.css` and `big.js` embeded in it.
 
 ###Generate `slides.html` calling remote js/css
 
@@ -75,7 +75,7 @@ This will output `slides.html` with a local copy of `big.css` and `big.js` embed
 	% Example Slides
 	% Harper Reed
 	% November 24, 2012
-	
+
 	# use &harr; to navigate
 	# Big.py
 	# Big+Python+Markdown
@@ -91,14 +91,14 @@ This will output `slides.html` with a local copy of `big.css` and `big.js` embed
 	# Big.py
 	# Helper script to generate slides from markdown
 	# PY+MD [github.com/ harperreed/ bigpy](https://github.com/harperreed/bigpy)
-	
+
 #Next
 
 No idea. I don't know if i will use this. I just wanted a way to generate big html with a script. It seemed like it should be easy. It was. Only one movie of hacking.
 
-Feel free to fix things as you need them.  
+Feel free to fix things as you need them.
 
 #Thanks
 
 * Obviously thanks goes to [Tom MacWright](https://github.com/tmcw) for [Big](https://github.com/tmcw/big).
-* [@maxogden](https://twitter.com/maxogden) for his insane presentation on [JS for cats](http://t.co/90zq8ux6). It was what convinced me to check out [Big](https://github.com/tmcw/big). 
+* [@maxogden](https://twitter.com/maxogden) for his insane presentation on [JS for cats](http://t.co/90zq8ux6). It was what convinced me to check out [Big](https://github.com/tmcw/big).
