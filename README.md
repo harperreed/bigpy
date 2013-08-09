@@ -1,11 +1,28 @@
 [Big.py](http://harperreed.github.com/bigpy/)
 =====
 
-After [wondering on twitter what the best HTML5 presentation system was](https://twitter.com/harper/status/272538510349717506), I had a [few](https://twitter.com/maxogden/status/272539403287666689) [people](https://twitter.com/mattdennewitz/status/272543105071337473) mention that [big]() was a solid presentation generator. 
+After [wondering on twitter what the best HTML5 presentation system was](https://twitter.com/harper/status/272538510349717506), I had a [few](https://twitter.com/maxogden/status/272539403287666689) [people](https://twitter.com/mattdennewitz/status/272543105071337473) mention that [big]() was a solid presentation generator.
 
-However, I wanted to use markdown to curate and handle my presentations and [big](https://github.com/tmcw/big) didn't handle markdown. There was a [fork](https://github.com/mdznr/big) that use markdown. I wanted to keep my content separate for curation purposes, so it didn't work for me. 
+However, I wanted to use markdown to curate and handle my presentations and [big](https://github.com/tmcw/big) didn't handle markdown. There was a [fork](https://github.com/mdznr/big) that use markdown. I wanted to keep my content separate for curation purposes, so it didn't work for me.
 
-Instead, I wrote a helper: [big.py](https://github.com/harperreed/bigpy). 
+Instead, I wrote a helper: [big.py](https://github.com/harperreed/bigpy).
+
+#Installation
+
+Get the source:
+
+    git clone https://github.com/harperreed/bigpy.git
+    cd bigpy
+
+Using [virtualenv](https://pypi.python.org/pypi/virtualenv)
+and [mkvirtualenv](https://pypi.python.org/pypi/virtualenvwrapper)
+(if you want) set yourself up:
+
+    mkvirtualenv bigpy
+
+Install some dependencies:
+
+    pip install -r requirements.txt
 
 #Usage
 
