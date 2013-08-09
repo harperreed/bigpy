@@ -105,7 +105,7 @@ def main():
     slide_html = []
     #generate html from markdown
     for s in slides:
-        slide_html.append("<div>" + markdown2.markdown(s).replace('<p>','').replace('\n','').replace('</p>','') +"</div>")
+        slide_html.append("<div>" + markdown2.markdown(s).replace('<p>','').replace('</p>','') +"</div>")
 
     #generate html
     html = ""
