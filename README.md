@@ -24,11 +24,23 @@ Install some dependencies:
 
     pip install -r requirements.txt
 
+Put the script in your virtualenv:
+
+    python setup.py develop
+
+You'll now be able to type:
+
+    bigpy -h
+
+You can always just run it from the source directory like this if you prefer:
+
+    python big.py -h
+
 #Usage
 
-`$ python big.py --help`
+`$ bigpy --help`
 
-	Usage: big.py [options]
+	Usage: bigpy [options]
 
 	Options:
 	  -h, --help            show this help message and exit
@@ -44,7 +56,7 @@ Install some dependencies:
 
 ###Generate all in one `slide.html` from `slide.md`:
 
-`$ python big.py -s slides.md`
+`$ bigpy -s slides.md`
 
 	Attempting to open slide file: slides.md
 	Remote css/js selected
@@ -62,7 +74,7 @@ This will output a `slides.html` that pulls the latest `big.css` and `big.js` fr
 
 ###Generate all in one `slides.html` from local js/css
 
-`$ python big.py -s slides.md --mode local`
+`$ bigpy -s slides.md --mode local`
 
 	Attempting to open slide file: slides.md
 	Local css/js selected
@@ -78,7 +90,7 @@ This will output `slides.html` with a local copy of `big.css` and `big.js` embed
 
 ###Generate `slides.html` calling remote js/css
 
-`$ python big.py -s slides.md --template_mode light`
+`$ bigpy -s slides.md --template_mode light`
 
 ###Generate allinone `slides.html`
 
