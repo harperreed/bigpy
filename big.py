@@ -99,16 +99,16 @@ def main():
     logging.info('\tNumber of slides: '+str(len(slides)))
 
     #define templates
-    allinone_header = """<!DOCTYPE html><html><head><title>"""+title+"""</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><style type='text/css'>"""+css+"""</style><script type='text/javascript'>"""+js+"""</script></head><body>"""
-    light_header ="""<!DOCTYPE html><html><head><title>"""+title+"""</title><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><link href='"""+options.css_filename+"""' rel='stylesheet' type='text/css' /><script src='"""+options.js_filename+"""'></script></head><body>"""
+    allinone_header = u"""<!DOCTYPE html><html><head><title>"""+title+"""</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><style type='text/css'>"""+css+"""</style><script type='text/javascript'>"""+js+"""</script></head><body>"""
+    light_header = u"""<!DOCTYPE html><html><head><title>"""+title+"""</title><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><link href='"""+options.css_filename+"""' rel='stylesheet' type='text/css' /><script src='"""+options.js_filename+"""'></script></head><body>"""
 
     slide_html = []
     #generate html from markdown
     for s in slides:
-        slide_html.append("<div>" + markdown2.markdown(s).replace('<p>','').replace('</p>','') +"</div>")
+        slide_html.append(u"<div>" + markdown2.markdown(s).replace('<p>','').replace('\n','').replace('</p>','') +"</div>")
 
     #generate html
-    html = ""
+    html = u""
     if options.template_mode == 'allinone':
         logging.info('Allinone template mode ')
 
@@ -121,7 +121,7 @@ def main():
 
     logging.info('Writing HTML: '+slide_filename)
     f = open(slide_filename, 'w')
-    f.write(html)
+    f.write(html.encode('utf8'))
     f.close()
 
 
