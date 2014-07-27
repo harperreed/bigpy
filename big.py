@@ -42,6 +42,10 @@ def main():
                       default="allinone",
                       help="template mode: allinone, light "
                            "[default: %default]")
+
+    parser.add_option("-o", "--output_file",
+        dest="output_filename",
+        default='slides.html')
     (options, args) = parser.parse_args()
 
     #Open and handle files
@@ -53,7 +57,7 @@ def main():
         logging.info('Error opening slide file: '+options.filename)
         sys.exit()
 
-    slide_filename = options.filename.replace('.md','.html')
+    slide_filename = options.output_filename
 
     #grab the big css/js files
     if options.mode == 'local':
