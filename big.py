@@ -71,8 +71,8 @@ def main():
             sys.exit()
     elif options.mode == 'remote':
         logging.info('Remote css/js selected')
-        options.js_filename = "https://raw.github.com/tmcw/big/gh-pages/big.js"
-        options.css_filename = "https://raw.github.com/tmcw/big/gh-pages/big.css"
+        options.js_filename = "https://raw.github.com/harperreed/big/gh-pages/big.js"
+        options.css_filename = "https://raw.github.com/harperreed/big/gh-pages/big.css"
 
         try:
             logging.info('Pulling css from: '+options.css_filename)
