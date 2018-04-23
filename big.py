@@ -95,8 +95,10 @@ def main():
     logging.info('\tAuthor: '+author)
     logging.info('\tDate: '+date)
 
+    new_slides = new_slides.replace('\#','!--HASH--!')
     slides = new_slides.split('#')[1:]
     logging.info('\tNumber of slides: '+str(len(slides)))
+    logging.info('\tApproximate length: '+str(len(slides)/6) + ' minutes')
 
     #define templates
     allinone_header = u"""<!DOCTYPE html><html><head><title>"""+title+"""</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><style type='text/css'>"""+css+"""</style><script type='text/javascript'>"""+js+"""</script></head><body>"""
@@ -118,6 +120,7 @@ def main():
         html = html + light_header
 
     html = html + "\n".join(slide_html)
+    html = html.replace('!--HASH--!','#')
 
     logging.info('Writing HTML: '+slide_filename)
     f = open(slide_filename, 'w')
