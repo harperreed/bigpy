@@ -6,7 +6,7 @@ import markdown2
 from optparse import OptionParser
 import re
 import sys
-import urllib2
+import requests
 
 logging.basicConfig(format="%(message)s",level=logging.INFO)
 
@@ -71,18 +71,19 @@ def main():
             sys.exit()
     elif options.mode == 'remote':
         logging.info('Remote css/js selected')
-        options.js_filename = "https://raw.github.com/harperreed/big/gh-pages/big.js"
-        options.css_filename = "https://raw.github.com/harperreed/big/gh-pages/big.css"
+        options.js_filename = "http://raw.github.com/harperreed/big/gh-pages/big.js"
+        options.css_filename = "http://raw.github.com/harperreed/big/gh-pages/big.css"
 
         try:
+            
             logging.info('Pulling css from: '+options.css_filename)
-            css = urllib2.urlopen(urllib2.Request(options.css_filename)).read()
+            css =  requests.get(options.css_filename).text
         except:
             logging.info('Error opening js url: '+options.css_filename)
             sys.exit()
         try:
             logging.info('Pulling js from: '+options.js_filename)
-            js = urllib2.urlopen(urllib2.Request(options.js_filename)).read()
+            js = requests.get(options.js_filename).text
         except:
             logging.info('Error opening js url: '+options.js_filename)
             sys.exit()
@@ -122,9 +123,10 @@ def main():
     html = html + "\n".join(slide_html)
     html = html.replace('!--HASH--!','#')
 
+    #save html
     logging.info('Writing HTML: '+slide_filename)
     f = open(slide_filename, 'w')
-    f.write(html.encode('utf8'))
+    f.write(html)
     f.close()
 
 
